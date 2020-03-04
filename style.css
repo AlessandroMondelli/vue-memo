@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+header {
+    height: 80px;
+    line-height: 80px;
+    background-color: #f9af2b;
+    color: white;
+}
+
+#men-title {
+    width: 98%;
+    margin: 0 auto;
+}
+
+#app {
+    background-color: #FCE796;
+    height: calc(100vh - 80px);
+    font-size: 18px;
+}
+
+#memo {
+    width: 85%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+#new-sez {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.filter {
+    background-color: rgba(0,0,0,0.3);
+}
+
+#new-memo {
+    position: fixed;
+    bottom: 15px;
+    right: 25px;
+    border-color: #FCE796;
+    background-color: #f9af2b;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.fa-plus, .fa-times {
+    font-size: 30px;
+}
+
+
+
+#new-write {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

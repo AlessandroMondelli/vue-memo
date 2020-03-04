@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Es Vue</title>
+        <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/fff0ef5f89.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div id="men-title">
+                <h1>MemoVue</h1>
+            </div>
+        </header>
+        <main>
+            <div id="app">
+                <div id="memo">
+                    <p v-if="empty">Aggiungi una MemoVue per iniziare</p>
+                </div>
+
+                <div v-bind:class="{ 'filter':newMemo }" id="new-sez">
+                    <button id="new-memo" v-on:click="hideShow">
+                        <i class="fas" v-bind:class="{ 'fa-plus':!newMemo, 'fa-times': newMemo }"></i>
+                    </button>
+                    <div v-if="newMemo" id="new-write">
+                        <h2>Scrivi</h2>
+                        <textarea name="memo" rows="8" cols="80"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
