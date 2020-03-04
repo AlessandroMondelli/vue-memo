@@ -29,6 +29,18 @@ header {
     padding: 40px;
 }
 
+#memo-list {
+    list-style-type: none;
+}
+
+#memo-list li {
+    padding: 15px;
+}
+
+#memo-list li:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
 #new-sez {
     width: 100vw;
     height: 100vh;
@@ -41,21 +53,44 @@ header {
     background-color: rgba(0,0,0,0.3);
 }
 
-#new-memo {
+/**BUTTON**/
+.new-memo {
     position: fixed;
     bottom: 15px;
     right: 25px;
-    border-color: #FCE796;
+    border: none;
     background-color: #f9af2b;
     padding: 20px;
     border-radius: 50%;
+    cursor: pointer;
+    transition: background 250ms ease-in-out,
+                   transform 150ms ease;
+       -webkit-appearance: none;
+       -moz-appearance: none;
 }
 
-.fa-plus, .fa-times {
+.new-memo.ok {
+    right: 95px;
+}
+
+.new-memo:hover,
+.new-memo:focus {
+   background: #f9af2b;
+}
+
+.new-memo:focus {
+   outline: none;
+}
+
+.new-memo:active {
+   transform: scale(0.80);
+}
+
+.fa-plus, .fa-times, .fa-check {
     font-size: 30px;
 }
 
-
+/**END-BUTTON**/
 
 #new-write {
     position: fixed;
